@@ -21,7 +21,7 @@
         <div class="col-xs-12">
           <div class="box box-info">
             <div class="box-header"> <!-- Start Header -->
-              <button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">Tambah</button>
+              <button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button>
             </div>	<!-- End Header -->
            
             <!-- /.box-header -->
@@ -61,7 +61,7 @@
 					<td>Example</td>
 					<td>Example</td>
 					<td>
-						<button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
+						<button class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
 						<button class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
 						<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
 					</td>
