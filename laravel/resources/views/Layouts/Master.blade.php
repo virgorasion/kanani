@@ -108,8 +108,7 @@ desired effect
                 </div>
               </li>
             </ul>
-          </li>
-          </li>          
+          </li>         
         </ul>
       </div>
     </nav>
@@ -128,7 +127,7 @@ desired effect
         <div class="pull-left info">
           <p>Alexander Pierce</p>
           <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+          {{--  <a href="#"><i class="fa fa-circle text-success"></i> Online</a>  --}}
         </div>
       </div>
 
@@ -156,8 +155,16 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href="{{url('Menu_Master/view_dokter')}}"><i class="fa fa-circle-o"></i>Dokter</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Jenis Rawat</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Obat</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Pegawai</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Peralatan</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Periksa</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Supplier</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>User Facial</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Level</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Satuan</a></li>
           </ul>
         </li>
 
@@ -226,7 +233,7 @@ desired effect
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2016 <a href="#">Ide Kreasi</a>.</strong> All rights reserved.
   </footer>
 
     </div>
