@@ -69,7 +69,7 @@
 
 				<tr>
 					<td>3</td>
-					<td>Inul Yakin</td>
+					<td>Inul Yaqin</td>
 					<td>X-RPL 1</td>
 					<td>SMKN 2 Surabaya</td>
 					<td>Example</td>
