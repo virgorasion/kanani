@@ -10,8 +10,8 @@
         <small>Admin</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i>master</a></li>
-        <li class="active">Dokter</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i>mas</a></li>
+        <li class="active">ter</li>
       </ol>
     </section>
 
