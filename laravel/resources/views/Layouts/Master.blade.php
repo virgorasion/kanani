@@ -106,6 +106,7 @@ desired effect
               </li>
             </ul>
           </li>
+          </li>          
         </ul>
       </div>
     </nav>
@@ -231,11 +232,12 @@ desired effect
   <!-- Add the sidebar's background. This div must be placed
   immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
+    <strong>Copyright &copy; 2016 <a href="http://new.idekreasi.net/">Rumah Koding</a>.</strong> All rights reserved.
+  </footer>
 </div>
 <!-- ./wrapper -->
 
 <!-- REQUIRED JS SCRIPTS -->
-
 <!-- jQuery 3 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
