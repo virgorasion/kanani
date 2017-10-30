@@ -268,7 +268,7 @@ desired effect
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
+            <li><a href="#">Link in level 1</a></li>
             <li><a href="#">Link in level 2</a></li>
           </ul>
         </li>
