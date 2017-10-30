@@ -54,7 +54,7 @@
 
 				<tr>
 					<td>2</td>
-					<td>Nathanael Ifandaeru</td>
+					<td>Nathanael Ifanda</td>
 					<td>X-RPL 1</td>
 					<td>SMKN 2 Surabaya</td>
 					<td>Example</td>
