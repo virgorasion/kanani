@@ -269,9 +269,7 @@ desired effect
             <li><a href="#">Link in level 2</a></li>
             <li><a href="#">Link in level 3</a></li>
             <li><a href="#">Link in level 4</a></li>
-            <li><a href="#">Link in level 3</a></li>
-            <li><a href="#">Link in level 1</a></li>
-            <li><a href="#">Link in level 3</a></li>
+         
           </ul>
         </li>
       </ul>
