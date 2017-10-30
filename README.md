@@ -1,2 +1,3 @@
 # kanani
-gw jomblo
+
+Kanani admin page with AdminLTE and Laravel
