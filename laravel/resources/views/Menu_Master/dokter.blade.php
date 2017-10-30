@@ -61,7 +61,7 @@
 					<td>Example</td>
 					<td>Example</td>
 					<td>
-						<button class="btn btn-print btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
+						<button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
 						<button class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
 						<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
 					</td>
