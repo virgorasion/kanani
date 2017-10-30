@@ -21,7 +21,7 @@
         <div class="col-xs-12">
           <div class="box box-info">
             <div class="box-header"> <!-- Start Header -->
-              <button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button>
+              <button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">Tambah</button>
             </div>	<!-- End Header -->
            
             <!-- /.box-header -->
