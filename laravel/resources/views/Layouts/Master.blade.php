@@ -155,16 +155,16 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{url('Menu_Master/view_dokter')}}"><i class="fa fa-circle-o"></i>Dokter</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Jenis Rawat</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Obat</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Pegawai</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Peralatan</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Periksa</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Supplier</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>User Facial</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Level</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Satuan</a></li>
+            <li><a href="{{url('/view_dokter')}}"><i class="fa fa-circle-o"></i>Dokter</a></li>
+            <li><a href="{{url('/view_jenisrawat')}}"><i class="fa fa-circle-o"></i>Jenis Rawat</a></li>
+            <li><a href="{{url('/view_obat')}}"><i class="fa fa-circle-o"></i>Obat</a></li>
+            <li><a href="{{url('/view_pegawai')}}"><i class="fa fa-circle-o"></i>Pegawai</a></li>
+            <li><a href="{{url('/view_peralatan')}}"><i class="fa fa-circle-o"></i>Peralatan</a></li>
+            <li><a href="{{url('/view_periksa')}}"><i class="fa fa-circle-o"></i>Periksa</a></li>
+            <li><a href="{{url('/view_supplier')}}"><i class="fa fa-circle-o"></i>Supplier</a></li>
+            <li><a href="{{url('/view_userfacial')}}"><i class="fa fa-circle-o"></i>User Facial</a></li>
+            <li><a href="{{url('/view_level')}}"><i class="fa fa-circle-o"></i>Level</a></li>
+            <li><a href="{{url('/view_satuan')}}"><i class="fa fa-circle-o"></i>Satuan</a></li>
           </ul>
         </li>
 
