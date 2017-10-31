@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/view_dokter' ,'DokterCtrl@index');
+
+Route::get('/Laporan_absensi' , 'LaporanCtrl@index');
