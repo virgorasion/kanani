@@ -9,7 +9,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>AdminLTE 2 | Starter</title>
   <!-- Tell the browser to be responsive to screen width -->
+  <!-- daterange for form -->
+  <link rel="stylesheet" href="bower_components/jquery-ui-1.12.1/jquery-ui.css">
+  <link rel="stylesheet" href="bower_components/jquery-ui-1.12.1/jquery-ui.min.css"> 
+  <!-- end -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="bower_components/bootstrap-daterangerpicker/daterangepicker.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
@@ -155,7 +160,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{url('Menu_Master/view_dokter')}}"><i class="fa fa-circle-o"></i>Dokter</a></li>
+            <li><a href="{{url('/view_dokter')}}"><i class="fa fa-circle-o"></i>Dokter</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i>Jenis Rawat</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i>Obat</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i>Pegawai</a></li>
@@ -176,8 +181,9 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href="{{url('/view_daftar_pasien')}}"><i class="fa fa-circle-o"></i>Pendaftaran Pasien</a></li>
+            <li><a href="{{url('/view_facial_pasien')}}"><i class="fa fa-circle-o"></i>Foto Pasien</a></li>
+            <li><a href="{{url('/view_rekam_medis')}}"><i class="fa fa-circle-o"></i>Rekam Medis</a></li>
           </ul>
         </li>
 
@@ -261,6 +267,9 @@ desired effect
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <!-- page script -->
+<!-- Date range for form -->
+<script src="bower_components/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="bower_components/jquery-ui-1.12.1/jquery-ui.js"></script>
 
 @yield('script')
 
@@ -268,4 +277,4 @@ desired effect
      Both of these plugins are recommended to enhance the
      user experience. -->
 </body>
-</html>
+</html> 
