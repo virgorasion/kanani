@@ -7,28 +7,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Starter</title>
+  <title>@yield('title')</title>
   <!-- Tell the browser to be responsive to screen width -->
-  <!-- daterange for form -->
-  <link rel="stylesheet" href="bower_components/jquery-ui-1.12.1/jquery-ui.css">
-  <link rel="stylesheet" href="bower_components/jquery-ui-1.12.1/jquery-ui.min.css"> 
-  <!-- end -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" href="bower_components/bootstrap-daterangerpicker/daterangepicker.css">
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{asset('bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{asset('bower_components/font-awesome/css/font-awesome.min.css')}}">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="{{asset('bower_components/Ionicons/css/ionicons.min.css')}}">
   <!-- Theme style -->
   <!-- DataTables -->
-  <link rel="stylesheet" href="bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="{{asset('bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}">
 
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="{{asset('plugins/iCheck/all.css')}}">
+
+  <link rel="stylesheet" href="{{asset('dist/css/AdminLTE.min.css')}}">
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect. -->
-  <link rel="stylesheet" href="dist/css/skins/skin-yellow.min.css">
+  <link rel="stylesheet" href="{{asset('dist/css/skins/skin-yellow.min.css')}}">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -89,14 +86,14 @@ desired effect
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
               <span class="hidden-xs">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
 
                 <p>
                   Alexander Pierce - Web Developer
@@ -127,7 +124,7 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -161,15 +158,15 @@ desired effect
           </a>
           <ul class="treeview-menu">
             <li><a href="{{url('/view_dokter')}}"><i class="fa fa-circle-o"></i>Dokter</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Jenis Rawat</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Obat</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Pegawai</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Peralatan</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Periksa</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Supplier</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>User Facial</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Level</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i>Satuan</a></li>
+            <li><a href="{{url('/view_jenisrawat')}}"><i class="fa fa-circle-o"></i>Jenis Rawat</a></li>
+            <li><a href="{{url('/view_obat')}}"><i class="fa fa-circle-o"></i>Obat</a></li>
+            <li><a href="{{url('/view_pegawai')}}"><i class="fa fa-circle-o"></i>Pegawai</a></li>
+            <li><a href="{{url('/view_peralatan')}}"><i class="fa fa-circle-o"></i>Peralatan</a></li>
+            <li><a href="{{url('/view_periksa')}}"><i class="fa fa-circle-o"></i>Periksa</a></li>
+            <li><a href="{{url('/view_supplier')}}"><i class="fa fa-circle-o"></i>Supplier</a></li>
+            <li><a href="{{url('/view_userfacial')}}"><i class="fa fa-circle-o"></i>User Facial</a></li>
+            <li><a href="{{url('/view_level')}}"><i class="fa fa-circle-o"></i>Level</a></li>
+            <li><a href="{{url('/view_satuan')}}"><i class="fa fa-circle-o"></i>Satuan</a></li>
           </ul>
         </li>
 
@@ -181,8 +178,8 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{url('/view_daftar_pasien')}}"><i class="fa fa-circle-o"></i>Pendaftaran Pasien</a></li>
-            <li><a href="{{url('/view_facial_pasien')}}"><i class="fa fa-circle-o"></i>Foto Pasien</a></li>
+            <li><a href="{{url('/view_daftar_pasien')}}"><i class="fa fa-circle-o"></i>Daftar Pasien</a></li>
+            <li><a href="{{url('/view_facial_pasien')}}"><i class="fa fa-circle-o"></i>Facial Pasien</a></li>
             <li><a href="{{url('/view_rekam_medis')}}"><i class="fa fa-circle-o"></i>Rekam Medis</a></li>
           </ul>
         </li>
@@ -208,19 +205,19 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-          </ul>
-        </li>
-
-        <li class="treeview">
-          <a href="#"><i class="fa fa-gear"></i> <span>Pengaturan</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
-          <ul class="treeview-menu">
-
+            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href="{{url('/view_lap_foto')}}"><i class="fa fa-circle-o"></i>History Foto</a></li>
+            <li><a href="{{url('/lap_stock_opname')}}"><i class="fa fa-circle-o"></i>Stock Opname</a></li>
+            <li><a href="{{url('/lap_konversi')}}"><i class="fa fa-circle-o"></i>Konversi Obat</a></li>
+            <li><a href="{{url('/view_inventory_resep')}}"><i class="fa fa-circle-o"></i>Inventory Resep</a></li>
           </ul>
         </li>
       </ul>
@@ -252,24 +249,22 @@ desired effect
 
 <!-- REQUIRED JS SCRIPTS -->
 <!-- jQuery 3 -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="{{asset('bower_components/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="{{asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- DataTables -->
-<script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="{{asset('bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
 <!-- SlimScroll -->
-<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="{{asset('bower_components/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
 <!-- FastClick -->
-<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<script src="{{asset('bower_components/fastclick/lib/fastclick.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
+<script src="{{asset('dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<script src="{{asset('plugins/iCheck/icheck.min.js')}}"></script>
+{{--  <script src="{{asset('dist/js/demo.js')}}"></script>  --}}
 <!-- page script -->
-<!-- Date range for form -->
-<script src="bower_components/jquery-ui-1.12.1/jquery-ui.min.js"></script>
-<script src="bower_components/jquery-ui-1.12.1/jquery-ui.js"></script>
 
 @yield('script')
 
@@ -277,4 +272,4 @@ desired effect
      Both of these plugins are recommended to enhance the
      user experience. -->
 </body>
-</html> 
+</html>

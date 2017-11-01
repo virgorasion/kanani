@@ -1,5 +1,9 @@
 @extends('Layouts.Master')
 
+@section('title')
+	VIP | Konversi Obat
+@endsection
+
 @section('content')
 
 	<div class="content-wrapper">

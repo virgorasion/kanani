@@ -1,5 +1,9 @@
 @extends('Layouts.Master')
 
+@section('title')
+	VIP | Rekam Medis
+@endsection
+
 @section('content')
 
 	<div class="content-wrapper">
