@@ -1,7 +1,7 @@
 @extends('Layouts.Master')
 
 @section('title')
-	VIP | Master Dokter
+	VIP | Master Jenis Rawat
 @endsection
 
 @section('content')
@@ -10,12 +10,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Master Dokter
+        Master Jenis Rawat
         <small>Admin</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i>Master</a></li>
-        <li class="active">Dokter</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Master</a></li>
+        <li class="active">Jenis Rawat</li>
       </ol>
     </section>
 
@@ -27,35 +27,34 @@
             <div class="box-header"> <!-- Start Header -->
               <button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button>
             </div>	<!-- End Header -->
-           
+
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
 			  <thead>
                 <tr>
-					<th>No.</th>
-					<th>Nama Dokter</th>
-					<th>Alamat</th>
-					<th>Kota</th>
-					<th>No Handphone</th>
-					<th>Telephone</th>
-					<th>Ambil Sidik</th>
+					<th><b>No.</b></th>
+					<th><b>Nama Rawat</b></th>
+					<th><b>Kode Preiksa</b></th>
+					<th><b>Biaya</b></th>
+					<th><b>Insentif Dokter</b></th>
+					<th>Insentif Perawat</th>
+					<th>Insetif Beautician</th>
 					<th>Action</th>
 				</tr>
 				</thead>
-				<tbody>
 				<tr>
 					<td>1</td>
 					<td>M Nur Fauzan W</td>
 					<td>X-RPL 1</td>
 					<td>SMKN 2 Surabaya</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>Example</td>
+					<td>Coba </td>
+					<td>Coba </td>
+					<td>Coba </td>
 					<td>
-						<button class="btn btn-success btn-xs" id="btnView" data-toggle="modal" data-target="#modalView"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modalEdit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" id="btnDelete"><span class="glyphicon glyphicon-remove"></span></button>
+						<button class="btn btn-success btn-xs" title="View" data-toggle="modal" data-target="#modalView"><span class="glyphicon glyphicon-ok"></span></button>
+						<button class="btn btn-warning btn-xs" title="Edit" data-toggle="modal" data-target="#modalEdit"><span class="glyphicon glyphicon-pencil"></span></button>
+						<button class="btn btn-danger btn-xs" title="Delete" data-toggle="modal"><span class="glyphicon glyphicon-remove"></span></button>
 					</td>
 				</tr>
 
@@ -64,13 +63,13 @@
 					<td>Nathanael Ifandaeru</td>
 					<td>X-RPL 1</td>
 					<td>SMKN 2 Surabaya</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>Example</td>
+					<td>Coba </td>
+					<td>Coba </td>
+					<td>Coba </td>
 					<td>
-						<button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
+						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
+						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
+						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
 					</td>
 				</tr>
 
@@ -79,13 +78,13 @@
 					<td>Inul Yakin</td>
 					<td>X-RPL 1</td>
 					<td>SMKN 2 Surabaya</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>Example</td>
+					<td>Coba </td>
+					<td>Coba </td>
+					<td>Coba </td>
 					<td>
-						<button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
+						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
+						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
+						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
 					</td>
 				</tr>
 
@@ -94,24 +93,21 @@
 					<td>Yoga Bersama Anjing</td>
 					<td>X-RPL 1</td>
 					<td>SMKN 2 Surabaya</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>Example</td>
+					<td>Coba </td>
+					<td>Coba </td>
+					<td>Coba </td>
 					<td>
-						<button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
+						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
+						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
+						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
 					</td>
 				</tr>
-				</tbody>
               </table>
             </div>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
-        </div>
-        <!-- /.col -->
-        <!-- MODAL EDIT START -->
+          <!-- Start Modal Add -->
 	<div class="modal fade" id="Mymodal" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -129,44 +125,44 @@
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Nama Dokter : </label>
+							<label for="no" class="col-sm-4">Nama Riwayat : </label>
 							<div class="col-sm-8">
 							<input type="text" name="" class="form-control" id="no" placeholder="Nama">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Alamat : </label>
+							<label for="no" class="col-sm-4">Kode Periksa : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Kelas">
+							<input type="text" name="" class="form-control" id="no" placeholder="Kode">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Kota : </label>
+							<label for="no" class="col-sm-4">Biaya : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Sekolah">
+							<input type="text" name="" class="form-control" id="no" placeholder="Biaya">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">No Handphone : </label>
+							<label for="no" class="col-sm-4">Insentif Dokter : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Sekolah">
+							<input type="text" name="" class="form-control" id="no" placeholder="Insentif Dokter">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Telepon : </label>
+							<label for="no" class="col-sm-4">Insentif Perawat : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Sekolah">
+							<input type="text" name="" class="form-control" id="no" placeholder="Insentif Perawat">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Ambil Sidik : </label>
+							<label for="no" class="col-sm-4">Insentif Beautician : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Sekolah">
+							<input type="text" name="" class="form-control" id="no" placeholder="Insentif Beautician">
 							</div>
 						</div>
 					</form>
@@ -178,10 +174,10 @@
 			</div>
 		</div>
 	</div>
-</div><!-- Modal Edit End -->
+</div> <!-- End Modal Add -->
 
-<!-- Start Modal View -->
-	<div class="modal modal-info fade" id="modalView" aria-hidden="true">
+<!-- Start Modal View-->
+<div class="modal fade" id="modalView" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -193,49 +189,49 @@
 						<div class="form-group row">
 							<label for="no" class="col-sm-4">No : </label>
 							<div class="col-sm-8">
-							<div id="viewNo"></div>
+							<div id="no"></div>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Nama Dokter : </label>
+							<label for="no" class="col-sm-4">Nama Riwayat : </label>
 							<div class="col-sm-8">
-							<div id="viewDokter"></div>
+							<div id="nari"></div>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Alamat : </label>
+							<label for="no" class="col-sm-4">Kode Periksa : </label>
 							<div class="col-sm-8">
-							<div id="viewAlamat"></div>
+							<div id="koper"></div>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Kota : </label>
+							<label for="no" class="col-sm-4">Biaya : </label>
 							<div class="col-sm-8">
-							<div id="viewKota"></div>
+							<div id="biaya"></div>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">No Handphone : </label>
+							<label for="no" class="col-sm-4">Insentif Dokter : </label>
 							<div class="col-sm-8">
-							<div id="viewHP"></div>
+							<div id="indok"></div>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Telepon : </label>
+							<label for="no" class="col-sm-4">Insentif Perawat : </label>
 							<div class="col-sm-8">
-							<div id="viewTelp"></div>
+							<div id="inper"></div>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Ambil Sidik : </label>
+							<label for="no" class="col-sm-4">Insentif Beautician : </label>
 							<div class="col-sm-8">
-							<div id="viewSidik"></div>
+							<div id="inbeau"></div>
 							</div>
 						</div>
 					</form>
@@ -247,7 +243,7 @@
 			</div>
 		</div>
 	</div>
-<!-- EDN MODAL VIEW -->
+</div> <!-- End Modal View -->
 
 <!-- Start Modal Edit -->
 <div class="modal fade" id="modalEdit" aria-hidden="true">
@@ -267,44 +263,44 @@
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Nama Dokter : </label>
+							<label for="no" class="col-sm-4">Nama Riwayat : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="nama" placeholder="Nama">
+							<input type="text" name="" class="form-control" id="no" placeholder="Nama">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Alamat : </label>
+							<label for="no" class="col-sm-4">Kode Periksa : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="alamat" placeholder="Kelas">
+							<input type="text" name="" class="form-control" id="no" placeholder="Kode">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Kota : </label>
+							<label for="no" class="col-sm-4">Biaya : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="kota" placeholder="Sekolah">
+							<input type="text" name="" class="form-control" id="no" placeholder="Biaya">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">No Handphone : </label>
+							<label for="no" class="col-sm-4">Insentif Dokter : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="nope" placeholder="Sekolah">
+							<input type="text" name="" class="form-control" id="no" placeholder="Insentif Dokter">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Telepon : </label>
+							<label for="no" class="col-sm-4">Insentif Perawat : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="telp" placeholder="Sekolah">
+							<input type="text" name="" class="form-control" id="no" placeholder="Insentif Perawat">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Ambil Sidik : </label>
+							<label for="no" class="col-sm-4">Insentif Beautician : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="sidik" placeholder="Sekolah">
+							<input type="text" name="" class="form-control" id="no" placeholder="Insentif Beautician">
 							</div>
 						</div>
 					</form>
@@ -314,8 +310,11 @@
 					<button type="button" class="btn btn-success">Save</button>
 				</div>
 			</div>
-		</div>
-	</div>
+		
+        </div>
+        <!-- /.col -->
+
+        </div>
 	
       </div>
       <!-- /.row -->
