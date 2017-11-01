@@ -1,5 +1,9 @@
 @extends('Layouts.Master')
 
+@section('title')
+	VIP | Master Dokter
+@endsection
+
 @section('content')
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -27,6 +31,7 @@
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
+			  <thead>
                 <tr>
 					<th>No.</th>
 					<th>Nama Dokter</th>
@@ -37,6 +42,8 @@
 					<th>Ambil Sidik</th>
 					<th>Action</th>
 				</tr>
+				</thead>
+				<tbody>
 				<tr>
 					<td>1</td>
 					<td>M Nur Fauzan W</td>
@@ -96,6 +103,7 @@
 						<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
 					</td>
 				</tr>
+				</tbody>
               </table>
             </div>
             <!-- /.box-body -->

@@ -1,5 +1,9 @@
 @extends('Layouts.Master')
 
+@section('title')
+	VIP | Master Jenis Rawat
+@endsection
+
 @section('content')
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -27,6 +31,7 @@
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
+			  <thead>
                 <tr>
 					<th><b>No.</b></th>
 					<th><b>Nama Rawat</b></th>
@@ -37,6 +42,7 @@
 					<th>Insetif Beautician</th>
 					<th>Action</th>
 				</tr>
+				</thead>
 				<tr>
 					<td>1</td>
 					<td>M Nur Fauzan W</td>
@@ -319,5 +325,10 @@
 @endsection
 
 @section('script')
-    
+    <script>
+  $(function () {
+    $('#example1').DataTable({})
+
+  })
+</script>
 @endsection

@@ -1,17 +1,21 @@
 @extends('Layouts.Master')
 
+@section('title')
+	VIP | Master Pegawai
+@endsection
+
 @section('content')
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Page Header
-        <small>Optional description</small>
+        Master Pagawai
+        <small>Admin</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i>Master</a></li>
+        <li class="active">Pegawai</li>
       </ol>
     </section>
 
@@ -27,6 +31,7 @@
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
+			  <thead>
                 <tr>
 					<th>No</th>
 					<th>Kode Barcode</th>
@@ -35,6 +40,7 @@
 					<th>Status</th>
 					<th>Action</th>
 				</tr>
+				</thead>
 				<tr>
 					<td>1</td>
 					<td>M Nur Fauzan W</td>
@@ -332,5 +338,10 @@
 @endsection
 
 @section('script')
-    
+    <script>
+	$(function () {
+    $('#example1').DataTable({})
+
+  })
+	</script>
 @endsection

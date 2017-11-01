@@ -1,17 +1,21 @@
 @extends('Layouts.Master')
 
+@section('title')
+	VIP | Master Obat
+@endsection
+
 @section('content')
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Page Header
-        <small>Optional description</small>
+        Master Obat
+        <small>Admin</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i>Master</a></li>
+        <li class="active">Obat</li>
       </ol>
     </section>
 
@@ -27,75 +31,76 @@
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
-                <tr>
-					<th>No</th>
-					<th>Kode Obat</th>
-					<th>Kode Barcode</th>
-					<th>Merek</th>
-					<th>Type Obat</th>
-					<th>Harga</th>
-					
-					<th>Action</th>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>M Nur Fauzan W</td>
-					<td>X-RPL 1</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Coba </td>
-					<td>Coba </td>
-					
-					<td>
-						<button class="btn btn-success btn-xs" title="View" data-toggle="modal" data-target="#modalView"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit" data-toggle="modal" data-target="#modalEdit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
+				<thead>
+					<tr>
+						<th>No</th>
+						<th>Kode Obat</th>
+						<th>Kode Barcode</th>
+						<th>Merek</th>
+						<th>Type Obat</th>
+						<th>Harga</th>
+						<th>Action</th>
+					</tr>
+					</thead>
+					<tr>
+						<td>1</td>
+						<td>M Nur Fauzan W</td>
+						<td>X-RPL 1</td>
+						<td>SMKN 2 Surabaya</td>
+						<td>Coba </td>
+						<td>Coba </td>
+						
+						<td>
+							<button class="btn btn-success btn-xs" title="View" data-toggle="modal" data-target="#modalView"><span class="glyphicon glyphicon-ok"></span></button>
+							<button class="btn btn-warning btn-xs" title="Edit" data-toggle="modal" data-target="#modalEdit"><span class="glyphicon glyphicon-pencil"></span></button>
+							<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+						</td>
+					</tr>
 
-				<tr>
-					<td>2</td>
-					<td>Nathanael Ifandaeru</td>
-					<td>X-RPL 1</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Coba </td>
-					<td>Coba </td>
-					
-					<td>
-						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
+					<tr>
+						<td>2</td>
+						<td>Nathanael Ifandaeru</td>
+						<td>X-RPL 1</td>
+						<td>SMKN 2 Surabaya</td>
+						<td>Coba </td>
+						<td>Coba </td>
+						
+						<td>
+							<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
+							<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
+							<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+						</td>
+					</tr>
 
-				<tr>
-					<td>3</td>
-					<td>Inul Yakin</td>
-					<td>X-RPL 1</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Coba </td>
-					<td>Coba </td>
-					
-					<td>
-						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
+					<tr>
+						<td>3</td>
+						<td>Inul Yakin</td>
+						<td>X-RPL 1</td>
+						<td>SMKN 2 Surabaya</td>
+						<td>Coba </td>
+						<td>Coba </td>
+						
+						<td>
+							<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
+							<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
+							<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+						</td>
+					</tr>
 
-				<tr>
-					<td>4</td>
-					<td>Yoga Bersama Anjing</td>
-					<td>X-RPL 1</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Coba </td>
-					<td>Coba </td>
-					
-					<td>
-						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
+					<tr>
+						<td>4</td>
+						<td>Yoga Bersama Anjing</td>
+						<td>X-RPL 1</td>
+						<td>SMKN 2 Surabaya</td>
+						<td>Coba </td>
+						<td>Coba </td>
+						
+						<td>
+							<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
+							<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
+							<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+						</td>
+					</tr>
               </table>
             </div>
             <!-- /.box-body -->
@@ -530,5 +535,10 @@
 @endsection
 
 @section('script')
-    
+    <script>
+	$(function () {
+    $('#example1').DataTable({})
+
+  })
+	</script>
 @endsection

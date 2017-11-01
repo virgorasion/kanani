@@ -1,17 +1,21 @@
 @extends('Layouts.Master')
 
+@section('title')
+    VIP | Master Level
+@endsection
+
 @section('content')
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Page Header
-        <small>Optional description</small>
+        Master Level
+        <small>Admin</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Master</a></li>
+        <li class="active">Level</li>
       </ol>
     </section>
 
@@ -27,44 +31,44 @@
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
+              <thead>
                 <tr>
-					<th>Level ID</th>
-					<th>Nama Level</th>
-					<th>Setting</th>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>M Nur Fauzan W</td>
-					<td>
-						<button class="btn btn-warning btn-xs" title="Edit" onclick="BtnClick()"><span class="glyphicon glyphicon-pencil"></span></button>
-					</td>	
-				</tr>
+                  <th>Level ID</th>
+                  <th>Nama Level</th>
+                  <th>Setting</th>
+                </tr>
+                </thead>
+                <tr>
+                  <td>1</td>
+                  <td>M Nur Fauzan W</td>
+                  <td>
+                    <button class="btn btn-warning btn-xs" title="Edit" onclick="BtnClick()"><span class="glyphicon glyphicon-pencil"></span></button>
+                  </td>	
+                </tr>
 
-				<tr>
-					<td>2</td>
-					<td>Nathanael Ifandaeru</td>
-					<td>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-					</td>
-				</tr>
+                <tr>
+                  <td>2</td>
+                  <td>Nathanael Ifandaeru</td>
+                  <td>
+                    <button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
+                  </td>
+                </tr>
 
-				<tr>
-					<td>3</td>
-					<td>Inul Yakin</td>
-					<td>
+                <tr>
+                  <td>3</td>
+                  <td>Inul Yakin</td>
+                  <td>
+                    <button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
+                  </td>
+                </tr>
 
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-
-					</td>
-				</tr>
-
-				<tr>
-					<td>4</td>
-					<td>Yoga Bersama Anjing</td>
-					<td>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-					</td>
-				</tr>
+                <tr>
+                  <td>4</td>
+                  <td>Yoga Bersama Anjing</td>
+                  <td>
+                    <button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
+                  </td>
+                </tr>
               </table>
             </div>
             <!-- /.box-body -->
@@ -86,8 +90,12 @@
 @section('script')
     <script type="text/javascript">
         function BtnClick(){
-            window.open("view_level/setting","newwindow");
+            window.open("{{url('view_level/setting')}}","newwindow");
             return false;
         }
+        $(function () {
+    $('#example1').DataTable({})
+
+  })
     </script>
 @endsection

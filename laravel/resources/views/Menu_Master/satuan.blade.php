@@ -1,17 +1,21 @@
 @extends('Layouts.Master')
 
+@section('title')
+		VIP | Master Satuan
+@endsection
+
 @section('content')
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Page Header
-        <small>Optional description</small>
+        Master Satuan
+        <small>Admin</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-        <li class="active">Here</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i>Master</a></li>
+        <li class="active">Satuan</li>
       </ol>
     </section>
 
@@ -27,45 +31,47 @@
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
+							<thead>
                 <tr>
-					<th>Nama Satuan</th>
-					<th>Action</th>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>
-						<button class="btn btn-success btn-xs" title="View" data-toggle="modal" data-target="#Viewmodal"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit" data-toggle="modal" data-target="#Editmodal"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button type="button" class="btn btn-danger btn-xs" title="Delete" id="btnDelete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
+									<th>Nama Satuan</th>
+									<th>Action</th>
+								</tr>
+								</thead>
+								<tr>
+									<td>1</td>
+									<td>
+										<button class="btn btn-success btn-xs" title="View" data-toggle="modal" data-target="#Viewmodal"><span class="glyphicon glyphicon-ok"></span></button>
+										<button class="btn btn-warning btn-xs" title="Edit" data-toggle="modal" data-target="#Editmodal"><span class="glyphicon glyphicon-pencil"></span></button>
+										<button type="button" class="btn btn-danger btn-xs" title="Delete" id="btnDelete"><span class="glyphicon glyphicon-remove"></span></button>
+									</td>
+								</tr>
 
-				<tr>
-					<td>2</td>
-					<td>
-						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
+								<tr>
+									<td>2</td>
+									<td>
+										<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
+										<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
+										<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+									</td>
+								</tr>
 
-				<tr>
-					<td>3</td>
-					<td>
-						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
+								<tr>
+									<td>3</td>
+									<td>
+										<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
+										<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
+										<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+									</td>
+								</tr>
 
-				<tr>
-					<td>4</td>
-					<td>
-						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
+								<tr>
+									<td>4</td>
+									<td>
+										<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
+										<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
+										<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+									</td>
+								</tr>
               </table>
             </div>
             <!-- /.box-body -->
@@ -208,5 +214,10 @@
 @endsection
 
 @section('script')
-    
+    <script>
+		$(function () {
+    $('#example1').DataTable({})
+
+  })
+		</script>
 @endsection
