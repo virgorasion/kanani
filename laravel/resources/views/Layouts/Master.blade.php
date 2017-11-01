@@ -19,6 +19,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- DataTables -->
   <link rel="stylesheet" href="{{asset('bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}">
 
+  <link rel="stylesheet" href="{{asset('plugins/iCheck/all.css')}}">
+
   <link rel="stylesheet" href="{{asset('dist/css/AdminLTE.min.css')}}">
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
@@ -248,6 +250,7 @@ desired effect
 <!-- AdminLTE App -->
 <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
+<script src="{{asset('plugins/iCheck/icheck.min.js')}}"></script>
 {{--  <script src="{{asset('dist/js/demo.js')}}"></script>  --}}
 <!-- page script -->
 

@@ -26,12 +26,37 @@
         <div class="col-xs-12">
           <div class="box box-info">
             <div class="box-header"> <!-- Start Header -->
-              <button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button>
+              <h4>Menu Setting Administrator</h4>
             </div>	<!-- End Header -->
            
             <!-- /.box-header -->
             <div class="box-body">
-              
+              <table id="example2" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Menu Master</th>
+                  <th>Menu Level</th>
+                  <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach($settings as $setting)
+                <tr>
+                    <td></td>
+                    <td>{{$setting->menu_name}}</td>
+                    
+                </tr>
+                @endforeach
+                </tbody>
+              </table>
+                <br>
+              <div class="form-inline">
+                    <button type="button" class="btn btn-success" id="save">Save</button>
+                <div class="col-lg-1 col-md-2 col-xs-3">
+                    <button type="button" class="btn btn-default" onclick="kembali()">Batal</button>
+                </div>
+              </div>
+
             </div>
             <!-- /.box-body -->
           </div>
@@ -43,13 +68,30 @@
 	
       </div>
       <!-- /.row -->
-
-    <!-- /.content -->
-
-  <!-- /.content-wrapper -->
 @endsection
 
 @section('script')
-    
+<script>
+  $(function () {
+    $('#example2').DataTable({
+      'paging'      : false,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : false,
+      'info'        : false,
+      'autoWidth'   : false
+     })
+});
+
+function kembali() {
+    window.history.back()
+}
+
+$('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+      checkboxClass: 'icheckbox_flat-green',
+      radioClass   : 'iradio_flat-green'
+    })
+</script>
+
 @endsection
 

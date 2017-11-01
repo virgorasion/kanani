@@ -18,11 +18,17 @@
         <li class="active">Level</li>
       </ol>
     </section>
-
     <!-- Main content -->
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
+    <!-- Alert Success -->
+          <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading"><i class="glyphicon glyphicon-ok"></i> Success !</h4>
+            <hr>
+            <p>Berhasil Setting Akses</p>
+            </div>
+          <!--END Alert-->
           <div class="box box-info">
             <div class="box-header"> <!-- Start Header -->
               <button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button>
