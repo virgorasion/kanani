@@ -48,4 +48,13 @@ Route::get('/Laporan_absensi' , 'LaporanCtrl@index');
 Route::get('/view_lap_foto' , 'LaporanFoto@index');
 Route::get('/lap_stock_opname' , 'LaporanOpname@index');
 Route::get('/lap_konversi' , 'LaporanKonversi@index');
+<<<<<<< HEAD
 Route::get('/view_inventory_resep' , 'LaporanResep@index');
+=======
+Route::get('/view_inventory_resep' , 'LaporanResep@index');
+Route::get('/my_pasien/addPasien' , 'MyPasien@index');
+Route::get('/my_facial/addFacial' , 'MyFacial@index');
+Route::get('/my_rekam_medis/addRekam' , 'MyRekam@index');
+//end nathan
+Route::get('/Laporan_absensi' , 'LaporanCtrl@index');
+>>>>>>> ad870f3ca146b0b061329788ad0cb089addd24ad
