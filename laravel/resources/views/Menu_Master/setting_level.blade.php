@@ -40,13 +40,14 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($settings as $setting)
+                
                 <tr>
                     <td></td>
-                    <td>{{$setting->menu_name}}</td>
+                    <td><td>
+                    <td><td>
                     
                 </tr>
-                @endforeach
+                
                 </tbody>
               </table>
                 <br>
