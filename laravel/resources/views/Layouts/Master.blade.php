@@ -13,11 +13,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="{{asset('bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{asset('bower_components/font-awesome/css/font-awesome.min.css')}}">
+  <!-- Datepicker Nathan -->
+  <link rel="stylesheet" href="{{asset('bower_components/jquery-ui-1.12.1/jquery-ui.min.css')}}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="{{asset('bower_components/Ionicons/css/ionicons.min.css')}}">
   <!-- Theme style -->
   <!-- DataTables -->
   <link rel="stylesheet" href="{{asset('bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}">
+  <!-- Date picker nathan -->
+  <link rel="stylesheet" href="">
 
   <link rel="stylesheet" href="{{asset('plugins/iCheck/all.css')}}">
 
@@ -255,6 +259,8 @@ desired effect
 <!-- DataTables -->
 <script src="{{asset('bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
+<!-- Date Picker Nathan -->
+<script src="{{asset('bower_components/jquery-ui-1.12.1/jquery-ui.min.js')}}"></script>
 <!-- SlimScroll -->
 <script src="{{asset('bower_components/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
 <!-- FastClick -->

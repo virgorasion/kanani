@@ -25,7 +25,7 @@
         <div class="col-xs-12">
           <div class="box box-info">
             <div class="box-header"> <!-- Start Header -->
-              <button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button>
+              <a href=""  onclick="window.open('{{url('my_facial/addFacial')}}', 'newwindow', 'width=300,height=250'); return false;""><button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button></a>
               <button class="btn btn-success">Search</button>
               <br><br>
               <label>
@@ -37,34 +37,12 @@
 				</label>
 				<input type="text" name="datepicker1" id="datepicker1">
 				<br><br>
-				<div class="form-inline"> 
-				<div class="pull-left col-sm-3 ">
-					<div class="form-group ">
-					<label>Show : </label>
-					<select class="form-control">
-						<option>10</option>
-						<option>25</option>
-						<option>50</option>
-						<option>100</option>
-					</select>
-					</div>
-				</div>
-
-					<form class="pull-right col-sm-3 col-xs-5"> 
-						<div class="form-group">
-							<div class="input-group">
-								<input type="text" class="form-control" name="" placeholder="Search">
-								<div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
-							</div>
-						</div>
-					</form>
-				
-			</div>
             </div>	<!-- End Header -->
            
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped table-scrollable">
+              <thead>
                 <tr>
 					<th>No.</th>
 					<th>No Facial</th>
@@ -75,6 +53,8 @@
 					<th>Gallery</th>
 					<th>Action</th>
 				</tr>
+			</thead>
+			<tbody>
 				<tr>
 					<td>1</td>
 					<td>X-RPL 1</td>
@@ -134,21 +114,9 @@
 						<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
 					</td>
 				</tr>
+				</tbody>
               </table>
             </div>
-            <nav aria-label="..." class="pull-right">
-			<ul class="pagination pagination-md">
-				<li class="page-item disabled">
-					<a href="#" class="page-link" tabindex="-1">Previous</a>
-				</li>
-				<li class="page-item"><a href="#" class="page-link">1</a></li>
-				<li class="page-item"><a href="#" class="page-link">2</a></li>
-				<li class="page-item"><a href="#" class="page-link">3</a></li>
-				<li class="page-item">
-					<a href="#" class="page-link">Next</a>
-				</li>
-			</ul>
-		</nav>
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
@@ -167,5 +135,10 @@
 	$ (function() {
 		$("#datepicker1").datepicker();
 	});
+
+	$ (function () 
+	{
+		$('#example1').DataTable({})
+	})
 </script>
 @endsection
