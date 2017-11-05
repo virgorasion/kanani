@@ -69,7 +69,7 @@ desired effect
   <header class="main-header">
 
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="{{url('/')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>VIP</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -190,14 +190,19 @@ desired effect
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-credit-card"></i> <span>Transaksi</span>
+            <i class="fa fa-money"></i> <span>Transaksi</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li class="active"><a href="{{url('/view_daftar_perawatan')}}"><i class="fa fa-circle-o"></i> Pendaftaran Perawatan</a></li>
+            <li><a href="{{url('/view_beli_obat')}}"><i class="fa fa-circle-o"></i> Pembelian Obat</a></li>
+            <li><a href="{{url('/view_jual_obat')}}"><i class="fa fa-circle-o"></i> Penjualan Obat</a></li>
+            <li><a href="{{url('/view_stock_opname')}}"><i class="fa fa-circle-o"></i> Stock Opname</a></li>
+            <li><a href="{{url('/view_penjualan_resep')}}"><i class="fa fa-circle-o"></i> Penjualan Resep</a></li>
+            <li><a href="{{url('/view_penulisan_resep')}}"><i class="fa fa-circle-o"></i> Penulisan Resep</a></li>
+            <li><a href="{{url('/view_konversi')}}"><i class="fa fa-circle-o"></i> Konsersi Satuan Obat</a></li>
           </ul>
         </li>
 
@@ -236,7 +241,7 @@ desired effect
   <footer class="main-footer">
     <!-- To the right -->
     <div class="pull-right hidden-xs">
-      Anything you want
+      Simplify Your Business
     </div>
     <!-- Default to the left -->
     <strong>Copyright &copy; 2016 <a href="#">Ide Kreasi</a>.</strong> All rights reserved.
