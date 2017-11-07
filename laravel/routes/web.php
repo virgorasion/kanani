@@ -18,6 +18,7 @@ Route::get('/', function () {
 //Routes Master
 Route::get('/view_dokter' ,'DokterCtrl@index');
 Route::get('/view_jenisrawat' ,'jenisrawatCtrl@index');
+Route::get('/view_jenisrawat/{id}' , 'jenisrawatCtrl@view');
 Route::get('/view_obat' ,'ObatCtrl@index');
 Route::get('/view_pegawai' ,'PegawaiCtrl@index');
 Route::get('/view_peralatan' ,'PeralatanCtrl@index');
@@ -25,8 +26,11 @@ Route::get('/view_periksa' ,'PeriksaCtrl@index');
 Route::get('/view_supplier' ,'SupplierCtrl@index');
 Route::get('/view_userfacial' ,'UserfacialCtrl@index');
 Route::get('/view_level' ,'LevelCtrl@index');
-Route::get('/view_level/setting' ,'LvlsettingCtrl@index');
+Route::get('/view_level/setting' ,'LevelCtrl@setting');
 Route::get('/view_satuan' ,'SatuanCtrl@index');
+Route::get('/number_format', function(){
+    return view('Menu_Master.number_format');
+});
 
 //start form nathan
 Route::get('/view_daftar_pasien' , 'DaftarPasien@index');

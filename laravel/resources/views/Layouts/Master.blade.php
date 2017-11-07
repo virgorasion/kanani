@@ -274,6 +274,8 @@ desired effect
 <script src="{{asset('dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('plugins/iCheck/icheck.min.js')}}"></script>
+<!-- InputMask -->
+
 {{--  <script src="{{asset('dist/js/demo.js')}}"></script>  --}}
 <!-- page script -->
 

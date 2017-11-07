@@ -43,65 +43,25 @@
 					<th>Action</th>
 				</tr>
 				</thead>
+				<tbody>
+				@foreach($values as $value)
 				<tr>
-					<td>1</td>
-					<td>M Nur Fauzan W</td>
-					<td>X-RPL 1</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Coba </td>
-					<td>Coba </td>
-					<td>Coba </td>
+					<td>{{ $no }}</td>
+					<td style="max-width:200px;">{{$value->nama_rawat}}</td>
+					<td>{{$value->periksa}}</td>
+					<td>{{number_format($value->biaya,0,',','.')}}</td>
+					<td>{{number_format($value->ins_dokter,0,',','.')}} </td>
+					<td>{{number_format($value->ins_perawat,0,',','.')}}</td>
+					<td>{{number_format($value->ins_beautician,0,',','.')}}</td>
 					<td>
-						<button class="btn btn-success btn-xs" title="View" data-toggle="modal" data-target="#modalView"><span class="glyphicon glyphicon-ok"></span></button>
+						<button class="btn btn-success btn-xs" title="View" data-toggle="modal" onclick="viewData('{{$value->kd_rawat}}')" data-target="#modalView"><span class="glyphicon glyphicon-ok"></span></button>
 						<button class="btn btn-warning btn-xs" title="Edit" data-toggle="modal" data-target="#modalEdit"><span class="glyphicon glyphicon-pencil"></span></button>
 						<button class="btn btn-danger btn-xs" title="Delete" data-toggle="modal"><span class="glyphicon glyphicon-remove"></span></button>
 					</td>
 				</tr>
-
-				<tr>
-					<td>2</td>
-					<td>Nathanael Ifandaeru</td>
-					<td>X-RPL 1</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Coba </td>
-					<td>Coba </td>
-					<td>Coba </td>
-					<td>
-						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
-
-				<tr>
-					<td>3</td>
-					<td>Inul Yakin</td>
-					<td>X-RPL 1</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Coba </td>
-					<td>Coba </td>
-					<td>Coba </td>
-					<td>
-						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
-
-				<tr>
-					<td>4</td>
-					<td>Yoga Bersama Anjing</td>
-					<td>X-RPL 1</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Coba </td>
-					<td>Coba </td>
-					<td>Coba </td>
-					<td>
-						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
+				<?php $no++; ?>
+				@endforeach
+				</tbody>
               </table>
             </div>
             <!-- /.box-body -->
@@ -185,53 +145,67 @@
 					<h4 class="modal-title">View Data</h4>
 				</div>
 				<div class="modal-body">
-					<form>
+					<form id="ModalView">
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">No : </label>
+							<label for="no" class="col-sm-3">Kode Rawat : </label>
 							<div class="col-sm-8">
-							<div id="no"></div>
+							<div id="view_kode_rawat"></div>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Nama Riwayat : </label>
+							<label for="no" class="col-sm-3">Nama Rawat : </label>
 							<div class="col-sm-8">
-							<div id="nari"></div>
+							<div id="view_nama_rawat"></div>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Kode Periksa : </label>
+							<label for="no" class="col-sm-3">Jenis Periksa : </label>
 							<div class="col-sm-8">
-							<div id="koper"></div>
+							<div id="view_jenis_periksa"></div>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Biaya : </label>
+							<label for="no" class="col-sm-3">Status : </label>
 							<div class="col-sm-8">
-							<div id="biaya"></div>
+							<div id="view_status"></div>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Insentif Dokter : </label>
+							<label for="no" class="col-sm-3">Status Dokter : </label>
 							<div class="col-sm-8">
-							<div id="indok"></div>
+							<div id="view_status_dokter"></div>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Insentif Perawat : </label>
+							<label for="no" class="col-sm-3">Biaya : </label>
 							<div class="col-sm-8">
-							<div id="inper"></div>
+							<div id="view_biaya"></div>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Insentif Beautician : </label>
+							<label for="no" class="col-sm-3">Insentif Dokter : </label>
 							<div class="col-sm-8">
-							<div id="inbeau"></div>
+							<div id="view_ins_dokter"></div>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="no" class="col-sm-3">Insentif Perawat : </label>
+							<div class="col-sm-8">
+							<div id="view_ins_perawat"></div>
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="no" class="col-sm-3">Insentif Beautician : </label>
+							<div class="col-sm-8">
+							<div id="view_ins_beautician"></div>
 							</div>
 						</div>
 					</form>
@@ -330,5 +304,49 @@
     $('#example1').DataTable({})
 
   })
+
+	function reformatNumber(val) {
+            var result = "";
+     
+            $.ajax({
+                url: "{{url('/number_format')}}",
+                data: {act : "titikKoma",id : val},
+                async: false,
+                success: function (res) {
+                     console.log(res);
+                    result = res;
+                },
+                error: function (res) {
+                    // console.log(res);
+                }
+            });
+     
+            return result;
+        }
+
+  function viewData(id){
+	  var urls = "{{ url('/view_jenisrawat/') }}/"+id;
+	  $.ajax({url : urls,
+	  success:function(result) {
+		  if(result[0].status == 'A') {
+			  var status = 'Aktif';
+		  }else{
+			  var status = 'Tidak Aktif';
+		  }
+
+		  console.log(result);
+		  $('#view_kode_rawat').text(result[0].kd_rawat);
+		  $('#view_nama_rawat').text(result[0].nama_rawat);
+		  $('#view_jenis_periksa').text(result[0].nama_periksa);
+		  $('#view_status').text(status);
+		  $('#view_status_dokter').text(result[0].status_dokter);
+		  $('#view_biaya').text(reformatNumber(result[0].biaya));
+		  $('#view_ins_dokter').text(result[0].ins_dokter);
+		  $('#view_ins_perawat').text(result[0].ins_perawat);
+		  $('#view_ins_beutician').text(result[0].ins_beautician);
+	  }
+	  });
+  }
+
 </script>
 @endsection

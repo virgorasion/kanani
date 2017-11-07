@@ -10,8 +10,7 @@ class LevelCtrl extends Controller
         return view('Menu_Master.level');
     }
 
-    public function id($id) {
-        $id = rand(1, 999);
-        return $id;
+    public function setting() {
+        return view('Menu_Master.setting_level');
     }
 }
