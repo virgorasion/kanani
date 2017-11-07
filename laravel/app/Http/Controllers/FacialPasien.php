@@ -10,4 +10,8 @@ class FacialPasien extends Controller
     {
     	return view('form.facial_pasien');
     }
+    public function show ()
+    {
+    	return view('form.my_facial');
+    }
 }

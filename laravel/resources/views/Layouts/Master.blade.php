@@ -196,7 +196,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>
         </li>
@@ -209,15 +209,15 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-            <li><a href=""><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li><a href="{{url('/view_absensi')}}"><i class="fa fa-circle-o"></i>Absensi</a></li>
+            <li><a href="{{url('/view_inventory')}}"><i class="fa fa-circle-o"></i>Inventory</a></li>
+            <li><a href="{{url('/lap_pembelian_obat')}}"><i class="fa fa-circle-o"></i>Pembelian Obat</a></li>
+            <li><a href="{{url('/Laporan_insentif_obat')}}"><i class="fa fa-circle-o"></i>Insentif Obat</a></li>
+            <li><a href="{{url('/Laporan_insentif')}}"><i class="fa fa-circle-o"></i>Insentif</a></li>
+            <li><a href="{{url('/Laporan_perawatan')}}"><i class="fa fa-circle-o"></i>Perawatan</a></li>
+            <li><a href="{{url('/Laporan_penjualan')}}"><i class="fa fa-circle-o"></i>Penjualan Obat</a></li>
+            <li><a href="{{url('/Laporan_penjualan_detail')}}"><i class="fa fa-circle-o"></i>Penjualan Obat Detil</a></li>
+            <li><a href="{{url('/Laporan_perpenju')}}"><i class="fa fa-circle-o"></i>Perawatan dan Penjualan</a></li>
             <li><a href="{{url('/view_lap_foto')}}"><i class="fa fa-circle-o"></i>History Foto</a></li>
             <li><a href="{{url('/lap_stock_opname')}}"><i class="fa fa-circle-o"></i>Stock Opname</a></li>
             <li><a href="{{url('/lap_konversi')}}"><i class="fa fa-circle-o"></i>Konversi Obat</a></li>
@@ -241,9 +241,9 @@ desired effect
     <!-- Default to the left -->
     <strong>Copyright &copy; 2016 <a href="#">Ide Kreasi</a>.</strong> All rights reserved.
   </footer>
-
+<!-- 
     </div>
-  </aside>
+  </aside> -->
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
   immediately after the control sidebar -->

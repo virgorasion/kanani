@@ -28,14 +28,25 @@ Route::get('/view_level/setting' ,'LvlsettingCtrl@index');
 Route::get('/view_satuan' ,'SatuanCtrl@index');
 //start form nathan
 Route::get('/view_daftar_pasien' , 'DaftarPasien@index');
+Route::get('/view_daftar_pasien/add' , 'DaftarPasien@show');
 Route::get('/view_facial_pasien' , 'FacialPasien@index');
+Route::get('/view_facial_pasien/add' , 'FacialPasien@show');
 Route::get('/view_rekam_medis' , 'RekamMedis@index');
+Route::get('/view_rekam_medis/add' , 'RekamMedis@show');
+//end nathan
+Route::get('/view_absensi' , 'LaporanCtrl@index');
+Route::get('/view_inventory' , 'LaporanInventory@index');
+Route::get('/lap_pembelian_obat' , 'LaporanBeliObat@index');
+Route::get('/lap_insentif_obat' , 'LaporanInsentif_Obat@index');
+Route::get('/lap_insentif' , 'LaporanInsentif@index');
+Route::get('/lap_perawatan' , 'LaporanPerawatan@index');
+Route::get('/lap_penjualan' , 'LaporanPenjualan@index');
+Route::get('/lap_penjualan_detail' , 'LaporanPenjualan_detail@index');
+Route::get('/lap_rawat_jual' , 'LaporanPerawatan@index');
 Route::get('/view_lap_foto' , 'LaporanFoto@index');
 Route::get('/lap_stock_opname' , 'LaporanOpname@index');
+Route::get('/lap_stock_opname/print' , 'LaporanOpname@show');
 Route::get('/lap_konversi' , 'LaporanKonversi@index');
+Route::get('/lap_konversi/print' , 'LaporanKonversi@show');
 Route::get('/view_inventory_resep' , 'LaporanResep@index');
-Route::get('/my_pasien/addPasien' , 'MyPasien@index');
-Route::get('/my_facial/addFacial' , 'MyFacial@index');
-Route::get('/my_rekam_medis/addRekam' , 'MyRekam@index');
-//end nathan
-Route::get('/Laporan_absensi' , 'LaporanCtrl@index');
+Route::get('/view_inventory_resep/print' , 'LaporanResep@show');

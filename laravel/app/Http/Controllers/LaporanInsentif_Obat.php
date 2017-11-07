@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class MyFacial extends Controller
+class LaporanInsentif_Obat extends Controller
 {
     public function index ()
     {
-    	return view('form.my_facial');
+    	return view('Laporan_master.Laporan_insentif_obat');
     }
 }
