@@ -23,7 +23,10 @@
       <div class="row">
         <div class="col-xs-12">
     <!-- Alert Success -->
-          <div class="alert alert-success" role="alert">
+          <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
             <h4 class="alert-heading"><i class="glyphicon glyphicon-ok"></i> Success !</h4>
             <hr>
             <p>Berhasil Setting Akses</p>
@@ -48,7 +51,8 @@
                   <td>1</td>
                   <td>M Nur Fauzan W</td>
                   <td>
-                    <button class="btn btn-warning btn-xs" title="Edit" onclick="BtnClick()"><span class="glyphicon glyphicon-pencil"></span></button>
+                    <button class="btn btn-warning btn-xs" title="Edit" onclick="window.open('{{url('view_level/setting')}}','newwindow', 'width=600,height=300');
+            return false;"><span class="glyphicon glyphicon-pencil"></span></button>
                   </td>	
                 </tr>
 
@@ -95,10 +99,9 @@
 
 @section('script')
     <script type="text/javascript">
-        function BtnClick(){
-            window.open("{{url('view_level/setting')}}","newwindow");
-            return false;
-        }
+        {{--  function BtnClick(){
+            
+        }  --}}
         $(function () {
     $('#example1').DataTable({})
 
