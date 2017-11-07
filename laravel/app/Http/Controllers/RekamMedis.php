@@ -10,4 +10,8 @@ class RekamMedis extends Controller
     {
     	return view('form.rekam_medis');
     }
+    public function show ()
+    {
+    	return view('form.my_rekam_medis');
+    }
 }

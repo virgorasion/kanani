@@ -10,4 +10,8 @@ class LaporanResep extends Controller
     {
     	return view('Laporan_master.Laporan_inventory_resep');
     }
+    public function show ()
+    {
+    	return view('Laporan_master.print.lap_inventory_resep_print');
+    }
 }

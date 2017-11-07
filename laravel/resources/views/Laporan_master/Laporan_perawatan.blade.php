@@ -1,154 +1,134 @@
-<?php include 'template/head.php' ?>
+@extends('Layouts.Master')
 
-<div class="container">
-			<h4 class="title">Laporan <span style="color:#9FCB20">Perawatan</span></h4>
+@section('title')
+    VIP | Perawatan
+@endsection
 
-		<div class="box"> <!-- Start box -->
-			<div class="box-header"> <!-- Start Header -->
-			<button class="btn btn-success"  onclick="window.open('Laporan_perawatan_print.php', 'newwindow', 'width=300,height=250'); return false;">Print Laporan Perawatan</button>
-			<button type="submit" name="Find" class="btn btn-success" style="margin-left:0.5%;">Cari</button>
-			<button type="submit" name="Find" class="btn btn-danger" style="margin-left:0.5%;">Hapus</button>
-			<br><br>
-			</div>	<!-- End Header -->
-            <div class="col-sm-3">
-            <label for="dokter">Dokter</label>
-            <input style="margin-left:10.6%;" id="dokter" name="dokter" size="20" type="text" class="ac_input">
-            </div>
-            <div "col-sm-3 col-xs-5">
-            <label for="kode_dokter">Kode Dokter</label>
-            <input style="margin-left:2.4%;" id="kode_dokter" name="kode_dokter" type="text" size="20">
-            </div>
-            <div class="pull-left col-sm-3">
-            <label for="Perawat">Perawat</label>
-            <input style="margin-left:6.7%;" id="Perawat" name="perawat" size="20" type="text" class="ac_input">
-            </div>
-            <div "pull-right col-sm-3 col-xs-5">
-            <label for="kode_Perawat">Kode Perawat</label>
-            <input style="margin-left:1.5%;" id="kode_Perawat" name="kode_perawat" type="text" size="20">
-            </div>
-            <div class="col-sm-3">
-            <label for="Beautician">Beautician</label>
-            <input id="Beautician" name="Beautician" size="20" type="text" class="ac_input">
-            </div>
-            <div "col-sm-3 col-xs-5">
-            <label for="kode_Beautician">Kode Beautician</label>
-            <input id="kode_Beautician" name="kode_Beautician" type="text" size="20">
-            </div>
-            <div class="pull-left col-sm-3">
-            <label for="pasien">Pasien</label>
-            <input style="margin-left:10%;" id="pasien" name="pasien" size="20" type="text" class="ac_input">
-            </div>
-            <div "pull-right col-sm-3 col-xs-5">
-            <label for="kode_pegawai">Kode Pasien</label>
-            <input style="margin-left:2.3%;" id="kode_pasien" name="kode_pasien" type="text" size="20">
-            </div>
-            <div class="pull-left col-sm-3">
-            <label for="pegawai">Pegawai</label>
-            <input style="margin-left:6%;" id="pegawai" name="pegawai" size="20" type="text" class="ac_input">
-            </div>
-            <div "pull-right col-sm-3 col-xs-5">
-            <label for="kode_pegawai">Kode Pegawai</label>
-            <input style="margin-left:1.3%;" id="kode_pegawai" name="kode_pegawai" type="text" size="20">
-            </div><br>
-			<div class="form-inline"> 
-			<div class="pull-left col-md-4">
-				<div class="form-group ">
-				<select class="form-control">
-				<option disabled>All Column</option>
-                <option>No</option>
-				<option>No Perawatan</option>
-				<option>Kode Pasien</option>
-				<option>Nama Pasien</option>
-				<option>Tanggal</option>
-                <option>Jenis Perawatan</option>
-				<option>Dokter</option>
-                <option>Perawat</option>
-                <option>Beautician</option>
-                <option>Total</option>
-				<option>Status</option>
-			</select>
-				</div>
-			</div>
 
-					<form class="pull-right col-sm-3 col-xs-5"> 
-						<div class="form-group">
-							<div class="input-group">
-								<input type="text" class="form-control" name="" placeholder="Search">
-								<div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
-							</div>
-						</div>
-					</form>
-				
-			</div>
+@section('content')
 
-			<div class="clearfix"></div>
-			<div class="box-body">
-			<div class="table-responsive">
-			<table class="table table-hover table-striped text-center table-border" id="datatable">
-				<tr>
-                <td><b>No</td></b>
-				<td><b>No Perawatan</td></b>
-				<td><b>Kode Pasien</td></b>
-				<td><b>Nama Pasien</td></b>
-				<td><b>Tanggal</td></b>
-                <td><b>Jenis Perawatan</td></b>
-				<td><b>Dokter</td></b>
-                <td><b>Perawat</td></b>
-                <td><b>Beautician</td></b>
-                <td><b>Total</td></b>
-				<td><b>Status</td></b>
-				</tr>
-				<tr>
-                <td>1</td>
-                <td>0001</td>
-                <td>456655</td>
-                <td>Fauzan</td>
-                <td>21-10-2017</td>
-                <td>Class A</td>
-                <td>Ainul</td>
-                <td>Yoga</td>
-                <td>Riyan</td>
-                <td>Riyan</td>
-                <td>Joget</td>
-				</tr>
+    <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Laporan Perawatan
+        <small>Admin</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>Laporan</a></li>
+        <li class="active">Perawatan</li>
+      </ol>
+    </section>
 
-				<tr>
-					<td colspan="5"></td>
-					<td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><b>Grand Total : </b></td>
-                    <td><b>0.00</b></td>
-                    <td><b></b></td>
-				</tr>
-			</table>
-		</div>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box box-info">
+            <div class="box-header"> <!-- Start Header -->
+              <button class="btn btn-success">Search</button>
+               <a href=""  onclick="window.open('{{url('lap_stock_opname/print')}}', 'newwindow', 'width=300,height=250'); return false;""><button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">Print</button></a>
+               <button class="btn btn-success">Clear</button>
+              <br><br>
+              <label>
+                    Mulai Tanggal
+                </label>
+                <input type="text" name="datepicker" id="datepicker">
+                <label>
+                    Sampai Tanggal
+                </label>
+                <input type="text" name="datepicker1" id="datepicker1">
+                <br><br>
+            </div>  <!-- End Header -->
+           
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped table-scrollable">
+              <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>No Transaksi</th>
+                    <th>Kode Pasien</th>
+                    <th>Tanggal</th>
+                    <th>Tipe Transaksi</th>
+                    <th>Nama Pasien</th>
+                    <th>Nama Dokter</th>
+                    <th>Total</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>X-RPL 1</td>
+                    <td>Example</td>
+                    <td>M Nur Fauzan W</td>
+                    <td>SMKN 2 Surabaya</td>
+                    <td>Example</td>
+                    <td>Example</td>
+                    <td>Example</td>
+                </tr>
 
-		<nav aria-label="..." class="pull-right">
-			<ul class="pagination pagination-md">
-				<li class="page-item disabled">
-					<a href="#" class="page-link" tabindex="-1">Previous</a>
-				</li>
-				<li class="page-item"><a href="#" class="page-link">1</a></li>
-				<li class="page-item"><a href="#" class="page-link">2</a></li>
-				<li class="page-item"><a href="#" class="page-link">3</a></li>
-				<li class="page-item">
-					<a href="#" class="page-link">Next</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
-</div> <!-- End Box -->
+                <tr>
+                    <td>2</td>
+                    <td>X-RPL 1</td>
+                    <td>Example</td>
+                    <td>Nathanael Ifandaeru</td>
+                    <td>SMKN 2 Surabaya</td>
+                    <td>Example</td>
+                    <td>Example</td>
+                    <td>Example</td>
+                </tr>
 
-                <div class="modal-footer">
+                <tr>
+                    <td>3</td>
+                    <td>X-RPL 1</td>
+                    <td>Example</td>
+                    <td>Inul Yakin</td>
+                    <td>SMKN 2 Surabaya</td>
+                    <td>Example</td>
+                    <td>Example</td>
+                    <td>Example</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>X-RPL 1</td>
+                    <td>Example</td>
+                    <td>Yoga Bersama Anjing</td>
+                    <td>SMKN 2 Surabaya</td>
+                    <td>Example</td>
+                    <td>Example</td>
+                    <td>Example</td>
+                </tr>
+                </tbody>
+                <tr>
+                    <th colspan="7" style="text-align:center;">Grand Total</th>
+                    <th>Int</th>
+                </tr>
+              </table>
             </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
         </div>
+        <!-- /.col -->
+      </div>
     </div>
-</div>
-</div>
 
-<?php 
-include 'Template/footer.php';
-include 'Template/end.php';
-?>
+@endsection
+@section('script')
+<script>
+$ (function () 
+{
+    $("#datepicker").datepicker();
+});
+$ (function () 
+{
+    $("#datepicker1").datepicker();
+});
+$ (function ()
+{
+    $("#example1").DataTable({})
+})
+</script>
+@endsection

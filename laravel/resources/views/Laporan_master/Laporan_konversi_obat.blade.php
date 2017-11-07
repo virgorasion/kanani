@@ -26,7 +26,7 @@
           <div class="box box-info">
             <div class="box-header"> <!-- Start Header -->
               <button class="btn btn-success">Search</button>
-              <button class="btn btn-success">Print</button>
+              <a href=""  onclick="window.open('{{url('lap_konversi/print')}}', 'newwindow', 'width=300,height=250'); return false;""><button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button></a>
               <br><br>
               <label>
 					Mulai Tanggal

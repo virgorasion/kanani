@@ -25,7 +25,7 @@
         <div class="col-xs-12">
           <div class="box box-info">
             <div class="box-header"> <!-- Start Header -->
-              <a href=""  onclick="window.open('{{url('my_rekam_medis/addRekam')}}', 'newwindow', 'width=300,height=250'); return false;""><button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button></a>
+              <a href=""  onclick="window.open('{{url('view_rekam_medis/add')}}', 'newwindow', 'width=300,height=250'); return false;""><button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button></a>
               <button class="btn btn-success">Search</button>
               <br><br>
               <label>

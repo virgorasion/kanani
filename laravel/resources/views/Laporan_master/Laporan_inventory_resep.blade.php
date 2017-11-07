@@ -25,7 +25,7 @@
         <div class="col-xs-12">
           <div class="box box-info">
             <div class="box-header"> <!-- Start Header -->
-              <button class="btn btn-success">Print</button>
+              <a href=""  onclick="window.open('{{url('view_inventory_resep/print')}}', 'newwindow', 'width=300,height=250'); return false;""><button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">Print</button></a>
               <br><br>
               <label>
 					Mulai Tanggal
