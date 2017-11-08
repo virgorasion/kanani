@@ -10,4 +10,9 @@ class DaftarPerawatan extends Controller
 
         return view('Transaksi.PendaftaranPerawatan');
     }
+
+    public function show()
+    {
+        return view('Transaksi.Other_page.my_daftar_perawatan_wajah');
+    }
 }
