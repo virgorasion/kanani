@@ -40,6 +40,8 @@ Route::get('/view_stock_opname' ,'StockOpnameCtrl@index');
 Route::get('/view_penjualan_resep' ,'JualResepCtrl@index');
 Route::get('/view_penulisan_resep' ,'TulisResepCtrl@index');
 Route::get('/view_konversi' ,'KonversiCtrl@index');
+//Routes add
+// Route::get('/view_', )
 
 //start form nathan
 Route::get('/view_daftar_pasien' , 'DaftarPasien@index');
