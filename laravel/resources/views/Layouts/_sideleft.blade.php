@@ -87,6 +87,10 @@
 		</a>
 		<ul class="treeview-menu">
 			<li>
+				<a href="{{url('/view_daftar_perawatan')}}">
+					<i class="fa fa-circle-o"></i> Pendaftaran Perawatan </a>
+			</li>
+			<li>
 				<a href="{{url('/view_beli_obat')}}">
 					<i class="fa fa-circle-o"></i> Pembelian Obat</a>
 			</li>
