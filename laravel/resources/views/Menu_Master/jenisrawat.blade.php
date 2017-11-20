@@ -55,7 +55,7 @@
 					<td>{{number_format($value->ins_beautician,0,',','.')}}</td>
 					<td>
 						<button class="btn btn-success btn-xs" title="View" data-toggle="modal" onclick="viewData('{{$value->kd_rawat}}')" data-target="#modalView"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit" data-toggle="modal" data-target="#modalEdit"><span class="glyphicon glyphicon-pencil"></span></button>
+						<button class="btn btn-warning btn-xs" title="Edit" data-toggle="modal" onclick="editData('{{$value->kd_rawat}}')" data-target="#modalEdit"><span class="glyphicon glyphicon-pencil"></span></button>
 						<button class="btn btn-danger btn-xs" title="Delete" data-toggle="modal"><span class="glyphicon glyphicon-remove"></span></button>
 					</td>
 				</tr>
@@ -75,62 +75,86 @@
 					<button class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<h4 class="modal-title">Tambah Data</h4>
 				</div>
+					<form method="post" action="/view_jenisrawat/post">
 				<div class="modal-body">
-					<form>
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">No : </label>
+							<label for="no" class="col-sm-3">Kode Jenis : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="No.">
+							<input type="text" name="add_kode_jenis" class="form-control" id="" placeholder="No.">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Nama Riwayat : </label>
+							<label for="no" class="col-sm-3">Nama Rawat : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Nama">
+							<input type="text" name="add_nama_rawat" class="form-control" id="" placeholder="Nama" value="">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Kode Periksa : </label>
+							<label for="no" class="col-sm-3">Kode Periksa : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Kode">
+							<select name="addKdPeriksa" class="form-control">
+								@foreach($selects as $item)
+								<option value="{{$item->kd_periksa}}">{{$item->nama_periksa}}</option>
+								@endforeach
+							</select>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Biaya : </label>
+							<label for="no" class="col-sm-3">Status : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Biaya">
+							<select name="addStatus" class="form-control">
+								<option value="1">Tdak Aktif</option>
+								<option value="0">Aktif</option>
+							</select>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Insentif Dokter : </label>
+							<label for="no" class="col-sm-3">Status Dokter : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Insentif Dokter">
+							<select name="addStatusDokter" class="form-control">
+								<option value="1">Dengan Dokter</option>
+								<option value="0">Tanpa Dokter</option>
+							</select>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Insentif Perawat : </label>
+							<label for="no" class="col-sm-3">Biaya : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Insentif Perawat">
+							<input type="text" name="add_biaya" class="form-control" id="" placeholder="Nama">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Insentif Beautician : </label>
+							<label for="no" class="col-sm-3">Insentif Dokter : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Insentif Beautician">
+							<input type="text" name="add_ins_dokter" class="form-control" id="" placeholder="Nama">
 							</div>
 						</div>
-					</form>
+
+						<div class="form-group row">
+							<label for="no" class="col-sm-3">Insentif Perawat : </label>
+							<div class="col-sm-8">
+							<input type="text" name="add_ins_perawat" class="form-control" id="" placeholder="Nama">
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="no" class="col-sm-3">Insentif Beautician : </label>
+							<div class="col-sm-8">
+							<input type="text" name="add_ins_beautician" class="form-control" id="" placeholder="Nama">
+							</div>
+						</div>
 				</div>
 				<div class="modal-footer">
 					<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
-					<button type="button" class="btn btn-success">Save</button>
+					<button type="submit" class="btn btn-success">Save</button>
 				</div>
+					</form>
 			</div>
 		</div>
 	</div>
@@ -212,7 +236,6 @@
 				</div>
 				<div class="modal-footer">
 					<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
-					<button type="button" class="btn btn-success">Save</button>
 				</div>
 			</div>
 		</div>
@@ -225,63 +248,86 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title">Tambah Data</h4>
+					<h4 class="modal-title">Edit Data</h4>
 				</div>
 				<div class="modal-body">
-					<form>
+					<form method="post" action="/view_jenisrawat/update">
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">No : </label>
+							<label for="no" class="col-sm-3">Kode Jenis : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="No.">
+							<input type="text" name="kode_jenis" class="form-control" id="kode_jenis" placeholder="No.">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Nama Riwayat : </label>
+							<label for="no" class="col-sm-3">Nama Rawat : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Nama">
+							<input type="text" name="nama_rawat" class="form-control" id="nama_rawat" placeholder="Nama" value="">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Kode Periksa : </label>
+							<label for="no" class="col-sm-3">Jenis Periksa : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Kode">
+							<select class="form-control" name="Jenis_periksa" id="edtJenis">
+							</select>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Biaya : </label>
+							<label for="no" class="col-sm-3">Status : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Biaya">
+							<select class="form-control" name="Status" id="edtStatus">
+								<option value="A">Aktif</option>
+								<option value="T">Tidak Aktif</option>
+							</select>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Insentif Dokter : </label>
+							<label for="no" class="col-sm-3">Status Dokter : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Insentif Dokter">
+							<select class="form-control" name="Status_dokter" id="edtStatusDok">
+								<option value="1">Dengan Dokter</option>
+								<option value="0">Tanpa Dokter</option>
+							</select>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Insentif Perawat : </label>
+							<label for="no" class="col-sm-3">Biaya : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Insentif Perawat">
+							<input type="text" name="biaya" class="form-control" id="biaya" placeholder="Nama">
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="no" class="col-sm-4">Insentif Beautician : </label>
+							<label for="no" class="col-sm-3">Insentif Dokter : </label>
 							<div class="col-sm-8">
-							<input type="text" name="" class="form-control" id="no" placeholder="Insentif Beautician">
+							<input type="text" name="ins_dokter" class="form-control" id="ins_dokter" placeholder="Nama">
 							</div>
 						</div>
-					</form>
+
+						<div class="form-group row">
+							<label for="no" class="col-sm-3">Insentif Perawat : </label>
+							<div class="col-sm-8">
+							<input type="text" name="ins_perawat" class="form-control" id="ins_perawat" placeholder="Nama">
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<label for="no" class="col-sm-3">Insentif Beautician : </label>
+							<div class="col-sm-8">
+							<input type="text" name="ins_beautician" class="form-control" id="ins_beautician" placeholder="Nama">
+							</div>
+						</div>
 				</div>
 				<div class="modal-footer">
+					{{ csrf_field() }}
+					<input type="hidden" name="_method" value="PUT">	
 					<button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
-					<button type="button" class="btn btn-success">Save</button>
+					<button type="submit" class="btn btn-success" id="edtSave">Save</button>
+					</form>
 				</div>
 			</div>
 		
@@ -313,7 +359,7 @@
                 data: {act : "titikKoma",id : val},
                 async: false,
                 success: function (res) {
-                     console.log(res);
+                   // console.log(res);
                     result = res;
                 },
                 error: function (res) {
@@ -334,19 +380,65 @@
 			  var status = 'Tidak Aktif';
 		  }
 
-		  console.log(result);
+		  if(result[0].status_dokter == 1){
+			  var dokter = "Dengan Dokter";
+		  }else{
+			  var dokter = "Tanpa Dokter";
+		  }
+		   
 		  $('#view_kode_rawat').text(result[0].kd_rawat);
 		  $('#view_nama_rawat').text(result[0].nama_rawat);
 		  $('#view_jenis_periksa').text(result[0].nama_periksa);
 		  $('#view_status').text(status);
-		  $('#view_status_dokter').text(result[0].status_dokter);
-		  $('#view_biaya').text(reformatNumber(result[0].biaya));
-		  $('#view_ins_dokter').text(result[0].ins_dokter);
-		  $('#view_ins_perawat').text(result[0].ins_perawat);
-		  $('#view_ins_beutician').text(result[0].ins_beautician);
+		  $('#view_status_dokter').text(dokter);
+		  $('#view_biaya').text(result[0].biaya.toLocaleString(['ban', 'id']));
+		  $('#view_ins_dokter').text(result[0].ins_dokter.toLocaleString(['ban', 'id']));
+		  $('#view_ins_perawat').text(result[0].ins_perawat.toLocaleString(['ban', 'id']));
+		  $('#view_ins_beautician').text(result[0].ins_beautician.toLocaleString(['ban', 'id']));
 	  }
 	  });
   }
 
+  function editData(id) {
+	  var urls = "{{url('/view_jenisrawat')}}/"+id;
+	  $.ajax({url : urls,
+	  success:function(result) {
+		  console.log(result);
+		  $('#kode_jenis').val(result[0].kd_rawat);
+		  $('#nama_rawat').val(result[0].nama_rawat);
+		  $('#biaya').val(result[0].biaya);
+		  $('#edtJenis').val(result[0].kd_periksa);
+		  $('#edtStatus').val(result[0].status);
+		  $('#edtStatusDok').val(result[0].status_dokter);
+		  $('#ins_dokter').val(result[0].ins_dokter);
+		  $('#ins_perawat').val(result[0].ins_perawat);
+		  $('#ins_beautician').val(result[0].ins_beautician);
+	  }
+	  });
+
+	  	
+  }
+
+  function selPeriksa() {
+	  var urls = "{{url('/data/selperiksa')}}";
+		$.ajax({
+			url : urls,
+			success:function(data) {
+				var html = '';
+				$.each(data ,function(i){
+				html += '<option value="'+data[i].kd_periksa+'">'+data[i].nama_periksa+'</option>';
+
+				})				
+			$('#edtJenis').html(html);
+			}
+		});
+  }
+
+	$(document).ready(function(){
+
+		selPeriksa();
+		
+	});
+	
 </script>
 @endsection

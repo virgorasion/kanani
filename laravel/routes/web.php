@@ -19,6 +19,10 @@ Route::get('/', function () {
 Route::get('/view_dokter' ,'DokterCtrl@index');
 Route::get('/view_jenisrawat' ,'jenisrawatCtrl@index');
 Route::get('/view_jenisrawat/{id}' , 'jenisrawatCtrl@view');
+Route::put('/view_jenisrawat/update' , 'jenisrawatCtrl@update');
+Route::post('/view_jenisrawat/{post}' , 'jenisrawatCtrl@store');
+Route::get('/data/selperiksa' , 'jenisrawatCtrl@selPeriksa');
+Route::get('/data/selstatus', 'jenisrawatCtrl@selStatus');
 Route::get('/view_obat' ,'ObatCtrl@index');
 Route::get('/view_pegawai' ,'PegawaiCtrl@index');
 Route::get('/view_peralatan' ,'PeralatanCtrl@index');
