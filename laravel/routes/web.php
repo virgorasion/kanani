@@ -38,12 +38,24 @@ Route::get('/number_format', function(){
 
 //Routes Transaksi
 Route::get('/view_daftar_perawatan' ,'DaftarPerawatan@index');
+Route::get('/view_daftar_perawatan/add', 'DaftarPerawatan@show');
+
 Route::get('/view_beli_obat' ,'BeliObatCtrl@index');
+Route::get('/view_beli_obat/add' ,'BeliObatCtrl@show');
+
 Route::get('/view_jual_obat' ,'JualObatCtrl@index');
+Route::get('/view_jual_obat/add' ,'JualObatCtrl@show');
+
 Route::get('/view_stock_opname' ,'StockOpnameCtrl@index');
+Route::get('/view_stock_opname/add' ,'StockOpnameCtrl@show');
+
 Route::get('/view_penjualan_resep' ,'JualResepCtrl@index');
+
 Route::get('/view_penulisan_resep' ,'TulisResepCtrl@index');
+Route::get('/view_penulisan_resep/add' ,'TulisResepCtrl@show');
+
 Route::get('/view_konversi' ,'KonversiCtrl@index');
+Route::get('/view_konversi/add' ,'KonversiCtrl@show');
 
 //start form nathan
 Route::get('/view_daftar_pasien' , 'DaftarPasien@index');
