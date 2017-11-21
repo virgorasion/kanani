@@ -59,7 +59,7 @@
 								<td>{{number_format($value->ins_perawat,0,',','.')}}</td>
 								<td>{{number_format($value->ins_beautician,0,',','.')}}</td>
 								<td>
-									<button class="btn btn-success btn-xs" title="View" data-toggle="modal" onclick="viewData('{{$value->kd_rawat}}')" data-target="#Mymodal">
+									<button class="btn btn-success btn-xs" title="View" data-toggle="modal" onclick="viewData('{{$value->kd_rawat}}')" data-target="#modalView">
 										<span class="glyphicon glyphicon-ok"></span>
 									</button>
 									<button class="btn btn-warning btn-xs" title="Edit" data-toggle="modal" onclick="editData('{{$value->kd_rawat}}')" data-target="#modalEdit">
@@ -78,7 +78,7 @@
 		</div>
 
 		<!-- Start Modal Add -->
-		<div class="modal fade" id="Mymodal" aria-hidden="true">
+		<div class="modal fade" id="modalAdd" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
