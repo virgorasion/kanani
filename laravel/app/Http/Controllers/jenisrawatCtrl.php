@@ -61,8 +61,28 @@ class jenisrawatCtrl extends Controller
 
     public function store(){
         $table = new jenisrawatModel;
-        dd(request()->all());
-        $table->kd_rawat = $request()->add_kd_jenis;
+        // dd(request()->add_kode_jenis);
+        $table->kd_rawat = request()->add_kode_jenis;
+        $table->nama_rawat = request()->add_nama_rawat;
+        $table->kd_periksa = request()->addKdPeriksa;
+        $table->status = request()->addStatus;
+        $table->status_dokter = request()->addStatusDokter;
+        $table->biaya = request()->add_biaya;
+        $table->ins_dokter = request()->add_ins_dokter;
+        $table->ins_perawat = request()->add_ins_perawat;
+        $table->ins_beautician = request()->add_ins_beautician;
+
+        $table->save();
+
+        return redirect('/view_jenisrawat');
+    }
+
+    public function delete($id){
+        $table = new jenisrawatModel;
+
+        $table::where('kd_rawat', $id)->delete();
+
+        return redirect('/view_jenisrawat');
     }
 }
   
