@@ -20,6 +20,21 @@
 	<section class="content container-fluid">
 
 		<div class="col-xs-12">
+			@if(count($errors))
+			<div class="alert alert-danger alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<h4>
+					<i class="icon fa fa-ban"></i> Alert!</h4>
+				<ul>
+					@foreach($errors->all() as $error)
+					<li>
+						{{ $error }}
+					</li>
+					@endforeach
+				</ul>
+			</div>
+			@endif
+
 			<div class="box box-info">
 				<div class="box-header">
 					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalAdd">ADD</button>

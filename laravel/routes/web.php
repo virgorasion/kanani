@@ -17,6 +17,10 @@ Route::get('/', function () {
 
 //Routes Master
 Route::get('/view_dokter' ,'DokterCtrl@index');
+Route::post('/view_dokter/{post}', 'DokterCtrl@store');
+Route::get('/view_dokter/delete/{id}', 'DokterCtrl@delete');
+Route::get('/view_dokter/view/{id}', 'DokterCtrl@view');
+Route::put('/view_dokter/update', 'DokterCtrl@update');
 Route::get('/view_jenisrawat' ,'jenisrawatCtrl@index');
 Route::get('/view_jenisrawat/{id}' , 'jenisrawatCtrl@view');
 Route::put('/view_jenisrawat/update' , 'jenisrawatCtrl@update');

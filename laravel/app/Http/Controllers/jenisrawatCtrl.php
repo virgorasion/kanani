@@ -60,6 +60,16 @@ class jenisrawatCtrl extends Controller
     }
 
     public function store(){
+
+        $this->validate(request(), [
+            'add_kode_jenis' => 'required',
+            'add_nama_rawat' => 'required',
+            'add_biaya' => 'required',
+            'add_ins_dokter' => 'required',
+            'add_ins_perawat' => 'required',
+            'add_ins_beautician' => 'required'
+        ]);
+
         $table = new jenisrawatModel;
         // dd(request()->add_kode_jenis);
         $table->kd_rawat = request()->add_kode_jenis;
