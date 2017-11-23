@@ -17,8 +17,17 @@ Route::get('/', function () {
 
 //Routes Master
 Route::get('/view_dokter' ,'DokterCtrl@index');
+Route::post('/view_dokter/{post}', 'DokterCtrl@store');
+Route::get('/view_dokter/delete/{id}', 'DokterCtrl@delete');
+Route::get('/view_dokter/view/{id}', 'DokterCtrl@view');
+Route::put('/view_dokter/update', 'DokterCtrl@update');
 Route::get('/view_jenisrawat' ,'jenisrawatCtrl@index');
 Route::get('/view_jenisrawat/{id}' , 'jenisrawatCtrl@view');
+Route::put('/view_jenisrawat/update' , 'jenisrawatCtrl@update');
+Route::post('/view_jenisrawat/{post}' , 'jenisrawatCtrl@store');
+Route::get('/view_jenisrawat/delete/{id}', 'jenisrawatCtrl@delete');
+Route::get('/data/selperiksa' , 'jenisrawatCtrl@selPeriksa');
+Route::get('/data/selstatus', 'jenisrawatCtrl@selStatus');
 Route::get('/view_obat' ,'ObatCtrl@index');
 Route::get('/view_pegawai' ,'PegawaiCtrl@index');
 Route::get('/view_peralatan' ,'PeralatanCtrl@index');
@@ -34,12 +43,24 @@ Route::get('/number_format', function(){
 
 //Routes Transaksi
 Route::get('/view_daftar_perawatan' ,'DaftarPerawatan@index');
+Route::get('/view_daftar_perawatan/add', 'DaftarPerawatan@show');
+
 Route::get('/view_beli_obat' ,'BeliObatCtrl@index');
+Route::get('/view_beli_obat/add' ,'BeliObatCtrl@show');
+
 Route::get('/view_jual_obat' ,'JualObatCtrl@index');
+Route::get('/view_jual_obat/add' ,'JualObatCtrl@show');
+
 Route::get('/view_stock_opname' ,'StockOpnameCtrl@index');
+Route::get('/view_stock_opname/add' ,'StockOpnameCtrl@show');
+
 Route::get('/view_penjualan_resep' ,'JualResepCtrl@index');
+
 Route::get('/view_penulisan_resep' ,'TulisResepCtrl@index');
+Route::get('/view_penulisan_resep/add' ,'TulisResepCtrl@show');
+
 Route::get('/view_konversi' ,'KonversiCtrl@index');
+Route::get('/view_konversi/add' ,'KonversiCtrl@show');
 
 //start form nathan
 Route::get('/view_daftar_pasien' , 'DaftarPasien@index');

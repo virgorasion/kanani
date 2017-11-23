@@ -25,7 +25,13 @@
         <div class="col-xs-12">
           <div class="box box-info">
             <div class="box-header"> <!-- Start Header -->
+<<<<<<< HEAD
               <a href=""  onclick="window.open('{{url('my_facial/add')}}', 'newwindow', 'width=300,height=250'); return false;""><button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button></a>
+=======
+              <a href=""  onclick="window.open('{{url('view_daftar_pasien/add')}}', 'newwindow',); return false;">
+								<button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button>
+							</a>
+>>>>>>> c92775a65473a039af9dafbdceba74c0a4197c98
               <button class="btn btn-success">Search</button>
               <br><br>
               <label>
