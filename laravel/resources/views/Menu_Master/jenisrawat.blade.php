@@ -341,9 +341,9 @@
 		  $('#view_status').text(status);
 		  $('#view_status_dokter').text(result[0].status_dokter);
 		  $('#view_biaya').text(reformatNumber(result[0].biaya));
-		  $('#view_ins_dokter').text(result[0].ins_dokter);
-		  $('#view_ins_perawat').text(result[0].ins_perawat);
-		  $('#view_ins_beutician').text(result[0].ins_beautician);
+		  $('#view_ins_dokter').text(reformatNumber(result[0].ins_dokter));
+		  $('#view_ins_perawat').text(reformatNumber(result[0].ins_perawat));
+		  $('#view_ins_beutician').text(reformatNumber(result[0].ins_beautician));
 	  }
 	  });
   }

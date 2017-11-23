@@ -25,7 +25,7 @@
         <div class="col-xs-12">
           <div class="box box-info">
             <div class="box-header"> <!-- Start Header -->
-              <a href=""  onclick="window.open('{{url('view_daftar_pasien/add')}}', 'newwindow', 'width=300,height=250'); return false;""><button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button></a>
+              <a href=""  onclick="window.open('{{url('my_facial/add')}}', 'newwindow', 'width=300,height=250'); return false;""><button class="btn btn-success" data-toggle="modal" data-target="#Mymodal">ADD</button></a>
               <button class="btn btn-success">Search</button>
               <br><br>
               <label>
@@ -50,70 +50,26 @@
 					<th>Nama Pasien</th>
 					<th>Tanggal</th>
 					<th>Perawat</th>
-					<th>Gallery</th>
 					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
+			@foreach($values as $value)
 				<tr>
-					<td>1</td>
-					<td>X-RPL 1</td>
-					<td>M Nur Fauzan W</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>Example</td>
+					<td>{{ $no }}</td>
+					<td>{{ $value->no_facial }}</td>
+					<td>{{ $value->kd_pasien }}</td>
+					<td>{{ $value->nama }}</td>
+					<td>{{ $value->tgl_facial }}</td>
+					<td>{{ $value->nama_pegawai }}</td>
 					<td>
 						<button class="btn btn-success btn-xs" id="btnView" data-toggle="modal" data-target="#modalView"><span class="glyphicon glyphicon-ok"></span></button>
 						<button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modalEdit"><span class="glyphicon glyphicon-pencil"></span></button>
 						<button class="btn btn-danger btn-xs" id="btnDelete"><span class="glyphicon glyphicon-remove"></span></button>
 					</td>
 				</tr>
-
-				<tr>
-					<td>2</td>
-					<td>X-RPL 1</td>
-					<td>Nathanael Ifandaeru</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>
-						<button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
-
-				<tr>
-					<td>3</td>
-					<td>X-RPL 1</td>
-					<td>Inul Yakin</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>
-						<button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
-
-				<tr>
-					<td>4</td>
-					<td>X-RPL 1</td>
-					<td>Yoga Bersama Anjing</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>
-						<button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
+			<?php $no++; ?>
+			@endforeach
 				</tbody>
               </table>
             </div>

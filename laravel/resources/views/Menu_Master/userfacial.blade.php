@@ -36,14 +36,14 @@
 					<th>No</th>
 					<th>Username</th>
 					<th>Status</th>
-
 					<th>Action</th>
 				</tr>
 				</thead>
+				@foreach($values as $value)
 				<tr>
-					<td>1</td>
-					<td>M Nur Fauzan W</td>
-					<td>X-RPL 1</td>
+					<td></td>
+					<td>{{ $value->kd_kary }}</td>
+					<td>{{ $value->level_name }}</td>
 
 					<td>
 						<button class="btn btn-success btn-xs" title="View" data-toggle="modal" data-target="#Viewmodal"><span class="glyphicon glyphicon-ok"></span></button>
@@ -51,39 +51,7 @@
 						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
 					</td>
 				</tr>
-
-				<tr>
-					<td>2</td>
-					<td>Nathanael Ifandaeru</td>
-					<td>X-RPL 1</td>
-					<td>
-						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
-
-				<tr>
-					<td>3</td>
-					<td>Inul Yakin</td>
-					<td>X-RPL 1</td>
-					<td>
-						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
-
-				<tr>
-					<td>4</td>
-					<td>Yoga Bersama Anjing</td>
-					<td>X-RPL 1</td>
-					<td>
-						<button class="btn btn-success btn-xs" title="View"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs" title="Edit"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs" title="Delete"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
+				@endforeach
               </table>
             </div>
             <!-- /.box-body -->

@@ -203,11 +203,14 @@ desired effect
             <li><a href="{{url('/view_penulisan_resep')}}"><i class="fa fa-circle-o"></i> Penulisan Resep</a></li>
             <li><a href="{{url('/view_konversi')}}"><i class="fa fa-circle-o"></i> Konsersi Satuan Obat</a></li>
           </ul>
-            <i class="fa fa-line-chart"></i> <span>Laporan</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
+          </li>
+          <li class="treeview">
+            <a href="#">
+              <i class="fa fa-line-chart"></i> <span>Laporan</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
           <ul class="treeview-menu">
             <li><a href="{{url('/view_absensi')}}"><i class="fa fa-circle-o"></i>Absensi</a></li>
             <li><a href="{{url('/view_inventory')}}"><i class="fa fa-circle-o"></i>Inventory</a></li>

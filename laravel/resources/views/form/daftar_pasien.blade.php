@@ -55,65 +55,23 @@
 				</tr>
 			</thead>
 			<tbody>
+			@foreach($values as $value)
 				<tr>
-					<td>1</td>
-					<td>X-RPL 1</td>
-					<td>M Nur Fauzan W</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>Example</td>
+					<td>{{ $no }}</td>
+					<td>{{ $value->kd_pasien }}</td>
+					<td style="max-width:100px;">{{ $value->nama }}</td>
+					<td style="max-width:100px;">{{ $value->alamat }}</td>
+					<td style="max-width:100px;">{{ $value->kota }}</td>
+					<td>{{ $value->telp }}</td>
+					<td>{{ $value->hp }}</td>
 					<td>
 						<button class="btn btn-success btn-xs" id="btnView" data-toggle="modal" data-target="#modalView"><span class="glyphicon glyphicon-ok"></span></button>
 						<button class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modalEdit"><span class="glyphicon glyphicon-pencil"></span></button>
 						<button class="btn btn-danger btn-xs" id="btnDelete"><span class="glyphicon glyphicon-remove"></span></button>
 					</td>
 				</tr>
-
-				<tr>
-					<td>2</td>
-					<td>X-RPL 1</td>
-					<td>Nathanael Ifandaeru</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>
-						<button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
-
-				<tr>
-					<td>3</td>
-					<td>X-RPL 1</td>
-					<td>Inul Yakin</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>
-						<button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
-
-				<tr>
-					<td>4</td>
-					<td>X-RPL 1</td>
-					<td>Yoga Bersama Anjing</td>
-					<td>SMKN 2 Surabaya</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>Example</td>
-					<td>
-						<button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok"></span></button>
-						<button class="btn btn-warning btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
-						<button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
-					</td>
-				</tr>
+				<?php $no++;  ?>
+			@endforeach
 				</tbody>
               </table>
             </div>

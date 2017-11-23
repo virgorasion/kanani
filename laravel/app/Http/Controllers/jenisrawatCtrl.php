@@ -11,11 +11,7 @@ class jenisrawatCtrl extends Controller
     public function index() {
         $table = 'App\Model\jenisrawatModel';
         $values = $table::select('jenis_rawat.*','jenis_periksa.nama_periksa as periksa')->join('jenis_periksa' ,'jenis_periksa.kd_periksa' ,'=' ,'jenis_rawat.kd_periksa')->get();
-        //$views = $table::select('jenis_rawat.kd_rawat','jenis_rawat.nama_rawat','jenis_rawat.kd_periksa','jenis_periksa.kd_periksa')->join('jenis_periksa' ,'jenis_periksa.kd_periksa' ,'=' ,'jenis_rawat.kd_periksa')->where('jenis_rawat.kd_rawat' , $id)->get();
-
-        //dd($values);
         $no=1;
-
         return view('Menu_Master.jenisrawat' ,compact('values' ,'no', 'views'));
     }
 
